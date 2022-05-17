@@ -13,12 +13,14 @@ jobs:
     runs-on: self-hosted
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v2
     - name: Set up JDK 8
-      uses: actions/setup-java@v3
+      uses: actions/setup-java@v2
       with:
         java-version: '8'
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
-      run: mvn -B package --file pom.xml
+      run: mvn clean install
+    - name: Exec jar file
+      run: sudo kill -9 `sudo lsof -i:8080` & sudo jar -jar /home/ec2-user/actions-runner/_work/demo-ec2/demo-ec2/target/demo-ec2-0.0.1-SNAPSHOT.jar
