@@ -35,7 +35,7 @@ public class HelloController {
 
     @PostMapping("/upload")
     public ResponseEntity<String> upload(@RequestParam("file") MultipartFile file) throws IOException {
-        fileService.uploadFile(file);
-        return ResponseEntity.ok("upload success");
+        String url = fileService.uploadFile(file);
+        return ResponseEntity.ok(url);
     }
 }

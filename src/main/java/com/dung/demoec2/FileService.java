@@ -24,7 +24,7 @@ public class FileService {
     private String s3BucketName;
 
     @Async
-    public void uploadFile(final MultipartFile multipartFile) throws IOException {
+    public String uploadFile(final MultipartFile multipartFile) throws IOException {
         final File file = new File(multipartFile.getOriginalFilename());
         try (final FileOutputStream outputStream = new FileOutputStream(file)) {
             outputStream.write(multipartFile.getBytes());
@@ -36,5 +36,7 @@ public class FileService {
         final PutObjectRequest objectRequest = new PutObjectRequest(s3BucketName, fileName, file);
         amazonS3.putObject(objectRequest);
         Files.delete(file.toPath()); // delete local file
+
+        return amazonS3.getUrl(s3BucketName, fileName).toExternalForm();
     }
 }
