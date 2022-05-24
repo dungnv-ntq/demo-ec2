@@ -1,6 +1,5 @@
 package com.dung.demoec2;
 
-import com.amazonaws.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -19,7 +18,7 @@ public class HelloController {
 
     @GetMapping("/hello")
     public String hello() {
-        return "hello world from amazon ec2";
+        return "hello dungnv45, welcome to amazon ec2!!!";
     }
 
 
