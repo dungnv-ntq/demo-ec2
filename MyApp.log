@@ -1,0 +1,33 @@
+2022-05-25 11:26:31.230  INFO 4596 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-25 11:26:31.256  WARN 4596 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-25 11:26:31.303  INFO 4596 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-05-25 11:26:31.324  INFO 4596 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 3000 (http) with context path ''
+2022-05-25 11:26:31.327  INFO 4596 --- [restartedMain] com.dung.demoec2.DemoEc2Application      : Started DemoEc2Application in 0.368 seconds (JVM running for 1463.465)
+2022-05-25 11:26:31.328  INFO 4596 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-05-25 11:27:16.411  INFO 4596 --- [Thread-27] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-25 11:27:16.411  INFO 4596 --- [Thread-27] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2022-05-25 11:27:16.437  INFO 4596 --- [Thread-27] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2022-05-25 11:27:16.526  INFO 4596 --- [restartedMain] com.dung.demoec2.DemoEc2Application      : Starting DemoEc2Application using Java 11.0.14 on DungNV9-D6 with PID 4596 (E:\example\demo-ec2\target\classes started by Admin in E:\example\demo-ec2)
+2022-05-25 11:27:16.526 DEBUG 4596 --- [restartedMain] com.dung.demoec2.DemoEc2Application      : Running with Spring Boot v2.6.7, Spring v5.3.19
+2022-05-25 11:27:16.526  INFO 4596 --- [restartedMain] com.dung.demoec2.DemoEc2Application      : The following 1 profile is active: "local"
+2022-05-25 11:27:16.656  INFO 4596 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-25 11:27:16.660  INFO 4596 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 1 JPA repository interfaces.
+2022-05-25 11:27:16.711  INFO 4596 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3000 (http)
+2022-05-25 11:27:16.712  INFO 4596 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-25 11:27:16.713  INFO 4596 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.62]
+2022-05-25 11:27:16.729  INFO 4596 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-05-25 11:27:16.729  INFO 4596 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 203 ms
+2022-05-25 11:27:16.759  INFO 4596 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-25 11:27:16.763  INFO 4596 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2022-05-25 11:27:16.788  INFO 4596 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2022-05-25 11:27:16.788  INFO 4596 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-05-25 11:27:16.813  INFO 4596 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-25 11:27:16.813  INFO 4596 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-25 11:27:16.862  WARN 4596 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-25 11:27:16.914  INFO 4596 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-05-25 11:27:16.921  INFO 4596 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 3000 (http) with context path ''
+2022-05-25 11:27:16.924  INFO 4596 --- [restartedMain] com.dung.demoec2.DemoEc2Application      : Started DemoEc2Application in 0.428 seconds (JVM running for 1509.062)
+2022-05-25 11:27:16.926  INFO 4596 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-05-25 11:28:57.792  INFO 4596 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-25 11:28:57.808  INFO 4596 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2022-05-25 11:28:57.826  INFO 4596 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.

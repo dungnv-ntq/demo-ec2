@@ -1,5 +1,6 @@
 package com.dung.demoec2;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -9,6 +10,7 @@ import java.io.IOException;
 import java.util.List;
 
 @RestController
+@Slf4j
 public class HelloController {
     @Autowired
     private StudentRepository repository;
@@ -18,6 +20,11 @@ public class HelloController {
 
     @GetMapping("/hello")
     public String hello() {
+        log.trace("A TRACE Message");
+        log.debug("A DEBUG Message");
+        log.info("An INFO Message");
+        log.warn("A WARN Message");
+        log.error("An ERROR Message");
         return "hello dungnv45, welcome to amazon ec2!!!";
     }
 
