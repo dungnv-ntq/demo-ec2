@@ -1,5 +1,7 @@
 package com.dung.demoec2;
 
+import com.dung.demoec2.elastic.ESService;
+import com.dung.demoec2.elastic.ESStudentModel;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -16,6 +18,9 @@ public class HelloController {
     private StudentRepository repository;
 
     @Autowired
+    private ESService esService;
+
+    @Autowired
     private FileService fileService;
 
     @GetMapping("/hello")
@@ -30,12 +35,13 @@ public class HelloController {
 
 
     @GetMapping("/students")
-    public List<Student> getAll() {
-        return repository.findAll();
+    public List<ESStudentModel> getAll(@RequestParam(required = false) String name) {
+        return esService.findAll(name);
     }
 
     @PostMapping("/students")
     public Student create(@RequestBody Student student) {
+        esService.save(esService.toModel(student));
         return repository.save(student);
     }
 
