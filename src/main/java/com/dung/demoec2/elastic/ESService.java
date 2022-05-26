@@ -22,9 +22,17 @@ public class ESService {
     ElasticsearchRestTemplate elasticsearchRestTemplate;
 
     public List<ESStudentModel> findAll(String name) {
+        Query query = new NativeSearchQueryBuilder()
+                .withQuery(QueryBuilders.matchQuery("name", name))
+                .build();
+        SearchHits<ESStudentModel> searchHits = elasticsearchRestTemplate.search(query, ESStudentModel.class);
 
-        return esRepository.findByName(name);
+        return searchHits.get().map(SearchHit::getContent).collect(Collectors.toList());
 
+    }
+
+    public List<ESStudentModel> search(String name, String address) {
+        return esRepository.findByNameContainsAndAddressContains(name, address);
     }
 
     public void save(ESStudentModel model) {

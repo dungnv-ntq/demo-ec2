@@ -35,8 +35,9 @@ public class HelloController {
 
 
     @GetMapping("/students")
-    public List<ESStudentModel> getAll(@RequestParam(required = false) String name) {
-        return esService.findAll(name);
+    public List<ESStudentModel> search(@RequestParam(required = false) String name,
+                                       @RequestParam(required = false) String address) {
+        return esService.search(name, address);
     }
 
     @PostMapping("/students")
